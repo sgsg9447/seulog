@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p className="text-red-600">
+          <p className="text-red-200">
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
