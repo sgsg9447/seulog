@@ -1,3 +1,5 @@
+import { getDatabaseItems } from "@/cms/notionClient";
+import { GetStaticProps } from "next";
 import React from "react";
 
 function Home() {
@@ -5,3 +7,12 @@ function Home() {
 }
 
 export default Home;
+
+export const getStaticProps : GetStaticProps = async () =>{
+ if(!process.env.DATABSE_ID) throw new Error("databaseId is not defined!!")
+  const databaseItems = await getDatabaseItems(process.env.DATABSE_ID)
+  console.log("databaseItems :>> ", databaseItems)
+  return {
+    props: {}
+  }
+}
