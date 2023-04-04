@@ -42,7 +42,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <div className="h-[72px]" /> 
+      <div className="h-[72px]" />
       {/* 완충제 역할을 함 header의 높이가 72px이여서 이만큼 띄어준다는 의미! 이 뒤에 내용이 들어올 수 없다!  */}
     </>
   );
