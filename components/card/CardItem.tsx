@@ -14,9 +14,9 @@ function CardItem({ cardItem }: CardItemProps) {
 
   console.log("1", cardItem);
   return (
-    <li className="rounded-2xl overflow-hidden shadow-lg group">
+    <li className="rounded-2xl overflow-hidden shadow-lg group flex flex-col">
       <Link href={`blog/${id}`}>
-        <a href="">
+        <a className="flex-grow">
           <div className="relative aspect-[1.3/1]">
             <Image
               src={cover}
@@ -25,7 +25,7 @@ function CardItem({ cardItem }: CardItemProps) {
               className="group-hover:scale-105 transition-transform"
             />
           </div>
-          <div className="p-6 flex flex-col gap-5">
+          <div className="p-4 flex flex-col gap-4">
             <h4 className="font-bold text-2xl group-hover:text-blue-500 transition-colors flex flex-row items-center gap-1">
               <IconRenderer icon={icon} />
               {title} title
@@ -38,7 +38,7 @@ function CardItem({ cardItem }: CardItemProps) {
           </div>
         </a>
       </Link>
-      <TagList tags={tags} />
+      {tags.length > 0 ? <TagList tags={tags} /> : null}
     </li>
   );
 }
