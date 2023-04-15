@@ -1,5 +1,4 @@
 import { ParsedDatabseItemType } from "@/utils/parseDatabaseItems";
-import React from "react";
 import CardItem from "./CardItem";
 
 interface CardListProps {

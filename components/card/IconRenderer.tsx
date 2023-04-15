@@ -1,6 +1,5 @@
 import { ParsedDatabseItemType } from "@/utils/parseDatabaseItems";
 import Image from "next/image";
-import React from "react";
 
 interface IconRendererProps {
   icon: ParsedDatabseItemType["icon"];
