@@ -22,6 +22,7 @@ function CardItem({ cardItem }: CardItemProps) {
               src={cover}
               alt={title}
               layout="fill"
+              objectFit="cover"
               className="group-hover:scale-105 transition-transform"
             />
           </div>
