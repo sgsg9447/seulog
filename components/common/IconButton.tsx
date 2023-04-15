@@ -1,4 +1,3 @@
-
 interface IconButtonProps {
   icon: React.ReactNode;
 }

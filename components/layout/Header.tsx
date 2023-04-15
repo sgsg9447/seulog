@@ -1,6 +1,6 @@
-import IconButton from "../common/IconButton";
-import { AiOutlineSearch } from "react-icons/ai";
 import Link from "next/link";
+import { AiOutlineSearch } from "react-icons/ai";
+import IconButton from "../common/IconButton";
 const navLinks = [
   {
     name: "Tags",

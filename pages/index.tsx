@@ -3,10 +3,9 @@ import CardSection from "@/components/intro/CardSection";
 import { HeroSection } from "@/components/intro/HeroSection";
 import {
   parseDatabaseItems,
-  ParsedDatabseItemType,
+  ParsedDatabseItemType
 } from "@/utils/parseDatabaseItems";
 import { GetStaticProps } from "next";
-import React from "react";
 
 interface HomeProps {
   databaseItems: ParsedDatabseItemType[];

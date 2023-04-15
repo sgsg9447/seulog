@@ -1,7 +1,6 @@
 import { COLOR_TABLE } from "@/const/const";
 import { ParsedDatabseItemType } from "@/utils/parseDatabaseItems";
 import Link from "next/link";
-import React from "react";
 
 interface TagItemProps {
   tagItem: ParsedDatabseItemType["tags"][number];
