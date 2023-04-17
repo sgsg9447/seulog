@@ -28,8 +28,8 @@ export const parseDatabaseItems = (
     const published = (작성일.type === "date" ? 작성일.date?.start : "") ?? "";
     const description =
       (설명.type === "rich_text" ? 설명.rich_text[0]?.plain_text : "") ?? "";
-    const title =
-      (Name.type === "rich_text" ? Name.rich_text[0]?.plain_text : "") ?? "";
+    const title = Name.type === "title" ? Name.title[0]?.plain_text : "";
+
     const tags = 태그.type === "multi_select" ? 태그.multi_select : [];
     const parsedResult: ParsedDatabseItemType = {
       id,
