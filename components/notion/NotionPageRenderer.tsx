@@ -5,6 +5,7 @@ import { NotionRenderer } from "react-notion-x";
 import dynamic from "next/dynamic";
 import nextLink from "next/link";
 import nextImage from "next/image";
+import TagItem from "../card/tag/TagItem";
 
 const Code = dynamic(
   () => import("react-notion-x/build/third-party/code").then((m) => m.Code),
@@ -60,6 +61,19 @@ const NotionPageRenderer = ({ recordMap }: NotionPageRendererProps) => {
         Modal,
         nextLink,
         nextImage,
+        propertyDateValue: ({ data }) => data[0][1][0][1].start_date,
+        propertySelectValue: ({ option: { id, color, value: name } }) => {
+          return (
+            <TagItem
+              key={id}
+              tagItem={{
+                color,
+                id,
+                name,
+              }}
+            />
+          );
+        },
       }}
     />
   );

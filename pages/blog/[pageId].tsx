@@ -32,6 +32,7 @@ export const getStaticProps: GetStaticProps<
   const recordMap = await getPageContent(pageId);
   return {
     props: { recordMap },
+    // revalidate: 300,
   };
 };
 
